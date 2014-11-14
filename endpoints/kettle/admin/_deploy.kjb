@@ -27,6 +27,11 @@
             <description/>
         </parameter>
         <parameter>
+            <name>GitReposFolderPath</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
             <name>GitUsername</name>
             <default_value/>
             <description/>
