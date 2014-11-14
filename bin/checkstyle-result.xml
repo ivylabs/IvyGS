@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="5.7">
+<file name="/applications/pentaho/5.0.1/biserver-ce/pentaho-solutions/system/IvyGS/src/com/ivyis/pentaho/ivygs/IvyGSContentGenerator.java">
+</file>
+<file name="/applications/pentaho/5.0.1/biserver-ce/pentaho-solutions/system/IvyGS/src/com/ivyis/pentaho/ivygs/manager/GitOperationsManager.java">
+</file>
+<file name="/applications/pentaho/5.0.1/biserver-ce/pentaho-solutions/system/IvyGS/src/com/ivyis/pentaho/ivygs/manager/Settings.java">
+</file>
+<file name="/applications/pentaho/5.0.1/biserver-ce/pentaho-solutions/system/IvyGS/src/com/ivyis/pentaho/ivygs/manager/SettingsManager.java">
+<error line="147" severity="error" message="Line is longer than 100 characters (found 103)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="/applications/pentaho/5.0.1/biserver-ce/pentaho-solutions/system/IvyGS/src/com/ivyis/pentaho/ivygs/manager/package-info.java">
+</file>
+<file name="/applications/pentaho/5.0.1/biserver-ce/pentaho-solutions/system/IvyGS/src/com/ivyis/pentaho/ivygs/package-info.java">
+</file>
+<file name="/applications/pentaho/5.0.1/biserver-ce/pentaho-solutions/system/IvyGS/src/com/ivyis/pentaho/ivygs/rest/PluginResource.java">
+</file>
+<file name="/applications/pentaho/5.0.1/biserver-ce/pentaho-solutions/system/IvyGS/src/com/ivyis/pentaho/ivygs/rest/package-info.java">
+</file>
+<file name="/applications/pentaho/5.0.1/biserver-ce/pentaho-solutions/system/IvyGS/src/com/ivyis/pentaho/ivygs/util/PluginConfig.java">
+</file>
+<file name="/applications/pentaho/5.0.1/biserver-ce/pentaho-solutions/system/IvyGS/src/com/ivyis/pentaho/ivygs/util/package-info.java">
+</file>
+</checkstyle>

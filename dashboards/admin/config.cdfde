@@ -1,0 +1,542 @@
+{
+ "layout": {
+  "title": "config",
+  "rows": [
+   {
+    "id": "8b1ccfd5-d953-eb8f-8d98-83c5c63c71ac",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "c5342bfc-ead9-34bc-deb0-fa3622cdd7d8",
+    "type": "LayoutColumn",
+    "typeDesc": "Column",
+    "parent": "8b1ccfd5-d953-eb8f-8d98-83c5c63c71ac",
+    "properties": [
+     {
+      "name": "name",
+      "value": "SUBMITTED_RESULT",
+      "type": "Id"
+     },
+     {
+      "name": "columnSpan",
+      "value": "12",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrepend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnAppend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrependTop",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnAppendBottom",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBigBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "07e22872-8231-6c52-7066-baa5848103f4",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "c5342bfc-ead9-34bc-deb0-fa3622cdd7d8",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"alert alert-success alert-dismissible\" style=\"display: none;\" role=\"alert\">\n  <strong id=\"alert-result\">Success!</strong> <span id=\"alert-result-message\"></span>\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "ee812155-5404-6a01-5fd0-d9ab8e230d7d",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "d431eed7-051a-8ece-ba41-8dac88aa688d",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "ee812155-5404-6a01-5fd0-d9ab8e230d7d",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "adebfc27-81fd-2682-f05b-b4fd4d82ffec",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "d431eed7-051a-8ece-ba41-8dac88aa688d",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<form id=\"configSettings\" class=\"form-horizontal\" role=\"form\" action=\"configSettings\" method=\"POST\" enctype=\"multipart/form-data\">\n  <div class=\"form-group\">\n    <label for=\"DIV_SERVER_URL\" class=\"col-sm-2 control-label\">Git Clone URL</label>\n    <div class=\"col-sm-10\" id=\"DIV_GIT_CLONE_URL\">\n        <input type=\"text\" class=\"form-control\" name=\"gitCloneURL\" id=\"gitCloneURL\" placeholder=\"Git Clone URL\">\n    </div>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"DIV_SERVER_USERNAME\" class=\"col-sm-2 control-label\">Username</label>\n    <div class=\"col-sm-10\" id=\"DIV_GIT_USERNAME\">\n        <input type=\"text\" class=\"form-control\" name=\"gitUsername\" id=\"gitUsername\" placeholder=\"Git Username\">\n    </div>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"DIV_SERVER_PASSWORD\" class=\"col-sm-2 control-label\">Password</label>\n    <div class=\"col-sm-10\" id=\"DIV_GIT_PASSWORD\">\n        <input type=\"password\" class=\"form-control\" name=\"gitPassword\" id=\"gitPassword\" placeholder=\"Git Password\">\n    </div>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"DIV_SERVER_PASSWORD\" class=\"col-sm-2 control-label\">ETL Package</label> \n    <div class=\"col-sm-10\">\n        <input type=\"file\" name=\"etlFile\" id=\"etlFile\" accept=\"application/zip\">\n    </div>\n  </div>\n  <div class=\"form-group\">\n    <div class=\"progress hide\">\n      <div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\">\n        0%\n      </div>\n    </div>\n  </div>\n  <div class=\"form-group\">\n    <div class=\"col-sm-offset-4 col-sm-2\" id=\"BACK_BUTTON\">\n    </div>\n    <div class=\"col-sm-2\" id=\"DIV_SUBMIT_BUTTON\">\n        <button type=\"button\" class=\"btn btn-default submitForm\">Submit</button>\n    </div>\n  </div>\n</form> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "521d3e92-ee57-ab24-7d13-f2374c410c6d",
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "JS",
+      "type": "Id"
+     },
+     {
+      "name": "resourceType",
+      "value": "Javascript",
+      "type": "Label"
+     },
+     {
+      "name": "resourceCode",
+      "value": "\n\nfunction progressHandlingFunction(e){\n    if(e.lengthComputable){\n        $('.progress').removeClass(\"hide\").show();\n        var loaded = e.loaded===0?0:(e.total*100)/e.loaded;\n        loaded = loaded<100?100:loaded;\n        $('.progress .progress-bar').css(\"width\", sprintf(\"%.2f\",loaded)+\"%\");\n        $('.progress .progress-bar').attr({\"aria-valuenow\":sprintf(\"%.2f\",loaded)});\n        $('.progress .progress-bar').text(sprintf(\"%.2f\",loaded)+\"%\");\n        $('.progress .progress-bar').css(\"width\", sprintf(\"%.2f\",loaded)+\"%\");\n    }\n} \n\n\n\n$('#DIV_SUBMIT_BUTTON button.submitForm').click(function(){\n    $('#DIV_SUBMIT_BUTTON button, #BACK_BUTTON button').addClass(\"disabled\");\n    $(\"#SUBMITTED_RESULT\").prepend(\"<div class='row img-loading'><div class='col-md-12'><center><img src='\"+webAppPath+\"/api/repos/IvyGS/static/custom/img/loading.gif'/></center></div></div>\");\n    var formData = new FormData($('form')[0]);\n    $.ajax({\n        url: 'configSettings',  //Server script to process data\n        type: 'POST',\n        xhr: function() {  // Custom XMLHttpRequest\n            var myXhr = $.ajaxSettings.xhr();\n            if(myXhr.upload){ // Check if upload property exists\n                myXhr.upload.addEventListener('progress',progressHandlingFunction, false); // For handling the progress of the upload\n            }\n            return myXhr;\n        },\n        //Ajax events\n        beforeSend: function(){console.log(\"beforeSend\");},\n        success: function(data){\n            $('#DIV_SUBMIT_BUTTON button, #BACK_BUTTON button').removeClass(\"disabled\");\n            $(\"#SUBMITTED_RESULT .row.img-loading\").remove();\n            \n            $('.progress').delay( 800 ).fadeOut( 400 ).hide(800);\n            $('.progress .progress-bar').delay( 800 ).css(\"width\", \"0%\");\n            $('.progress .progress-bar').delay( 800 ).attr({\"aria-valuenow\":0});\n            $('.progress .progress-bar').delay( 800 ).text(\"0%\");\n            $('.progress .progress-bar').delay( 800 ).css(\"width\", \"0%\");\n            \n            var dataResult = $.parseJSON(data);\n            var alertType = \"danger\";\n            var alertMsg = \"<strong id='alert-result'>Erorr!</strong> On update configuration.\";\n            if(dataResult.status==\"ok\"&&dataResult.result==\"true\"){\n                alertType = \"success\";\n                alertMsg = \"<strong id='alert-result'>Success!</strong> Configuration update.\";\n            }\n            $(\"#SUBMITTED_RESULT .alert\").removeClass(\"alert-success\").removeClass(\"alert-danger\");\n            $(\"#SUBMITTED_RESULT .alert\").addClass(\"alert-\"+alertType);\n            $(\"#SUBMITTED_RESULT .alert\").html('<button type=\"button\" class=\"close\">\\\n                    <span>&times;</span><span class=\"sr-only\">Close</span>\\\n                </button>'+alertMsg);\n            \n            $(\"#SUBMITTED_RESULT .alert\").delay( 500 ).fadeIn( 600 ).show(800);\n            \n            $('.alert .close').click(function () {\n              $(this).parents(\".alert\").fadeOut( 400 ).hide(800);\n            });\n            \n            console.log(data);\n        \n        },\n        error: function(data){console.log(data);},\n        // Form data\n        data: formData,\n        //Options to tell jQuery not to process data or worry about content-type.\n        cache: false,\n        contentType: false,\n        processData: false,\n        async: true\n    });\n}); ",
+      "type": "Resource"
+     }
+    ]
+   }
+  ]
+ },
+ "components": {
+  "rows": [
+   {
+    "id": "OTHERCOMPONENTS",
+    "name": "Others",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Others",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "8b539539-fc38-4c3d-3262-b6a6e74faa66",
+    "type": "ComponentsbuttonComponent",
+    "typeDesc": "Button Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "BACK_BUTTON",
+      "type": "Id"
+     },
+     {
+      "name": "label",
+      "value": "Back",
+      "type": "String"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "actionParameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "expression",
+      "value": "function(){\n    window.location = \"main\";    \n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "successCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "failureCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "Datasource",
+      "value": "",
+      "type": "Datasource"
+     },
+     {
+      "name": "priority",
+      "value": "1",
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "buttonStyle",
+      "value": "classic",
+      "type": "TableStyle"
+     },
+     {
+      "name": "htmlObject",
+      "value": "BACK_BUTTON",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function(){\n    $(\"#\"+this.htmlObject+\" button\").addClass(\"btn btn-default\");\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "cc45aae9-20ce-1f09-2f0c-ee15fbcd162f",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "GET_VARS_COMP",
+      "type": "Id"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "resultvar",
+      "value": "IVYGS_VARS",
+      "type": "Result"
+     },
+     {
+      "name": "dataSource",
+      "value": "GET_VARS",
+      "type": "Datasource"
+     },
+     {
+      "name": "priority",
+      "value": "2",
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function(){\n\n\n$(\"#gitCloneURL\").val(IVYGS_VARS[0][1]);\n$(\"#gitUsername\").val(IVYGS_VARS[0][2]);\n$(\"#gitPassword\").val(IVYGS_VARS[0][3]);\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   }
+  ]
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "IVYGS_CPKENDPOINTS",
+    "name": "IVYGS Endpoints",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "IVYGS Endpoints",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "f8edeb43-499b-80bf-59b5-94ee7064294b",
+    "type": "ComponentsIvyGS_getVars_CPKENDPOINT",
+    "typeDesc": "getVars Endpoint",
+    "parent": "IVYGS_CPKENDPOINTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "GET_VARS",
+      "type": "Id"
+     },
+     {
+      "name": "stepName",
+      "value": "OUTPUT",
+      "type": "String"
+     },
+     {
+      "name": "kettleOutput",
+      "value": "Inferred",
+      "type": "kettleOutputCustom"
+     }
+    ],
+    "meta": "CPK",
+    "meta_pluginId": "IvyGS",
+    "meta_endpoint": "getVars"
+   }
+  ]
+ },
+ "filename": "/system/IvyGS/dashboards/admin/config.cdfde"
+}

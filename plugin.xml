@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin title="IvyGS" loader="DEFAULT">
+<overlays>
+		<overlay id="startup.IvyGS" resourcebundle="content/IvyGS/resources/lang/messages" priority="5">
+			<menubar id="toolsmenu">
+	        	<menuitem id="IvyGS" label="${Launcher.IvyGS}" command="mantleXulHandler.openUrl('${Launcher.IvyGS}','${Launcher.IvyGS_TOOLTIP}','plugin/IvyGS/api/default')"/>
+	      	</menubar>
+	    </overlay>
+	</overlays>
+	<lifecycle-listener class="pt.webdetails.cpk.CpkLifecycleListener"/>
+	<static-paths>
+		<static-path url="/IvyGS/static" localFolder="static"/>
+		<static-path url="/IvyGS/resources" localFolder="resources"/>
+	</static-paths>
+	<content-types>
+		<content-type>
+			<title>IvyGS</title>
+			<description></description>
+			<company name="" url="" logo="@PLUGIN_COMPANY_LOGO@"></company>
+		</content-type>
+	</content-types>
+	<content-generator
+		id="IvyGS"
+		title="IvyGS"
+		type="IvyGS"
+		class="com.ivyis.pentaho.ivygs.IvyGSContentGenerator"/>
+	<!-- Menu entry -->
+	<menu-items>
+		<!--<menu-item id="IvyGS_main" anchor="tools-submenu" label="IvyGS" command="content/IvyGS/" type="MENU_ITEM" how="LAST_CHILD"/>-->
+	</menu-items>
+</plugin>

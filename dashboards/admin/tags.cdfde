@@ -1,0 +1,454 @@
+{
+ "layout": {
+  "title": "tags",
+  "rows": [
+   {
+    "id": "1f11821f-ef68-b2af-800f-e081fb95e50d",
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "HELPER",
+      "type": "Id"
+     },
+     {
+      "name": "resourceType",
+      "value": "Javascript",
+      "type": "Label"
+     },
+     {
+      "name": "resourceCode",
+      "value": "function modalOkBtn(){\n        $('#modal-clone-tag .btn').addClass(\"disabled\");\n        $(\"#modal-clone-tag .modal-footer\").prepend(\"<img class='pull-left' src='\"+webAppPath+\"/api/repos/IvyGS/static/custom/img/loading.gif'/>\");\n        \n        $.ajax({\n          type: \"POST\",\n          url: webAppPath + \"/plugin/IvyGS/api/clone?paramGitPointCheckout=\"+encodeURIComponent(window.IvyGS.tagName),\n          async: true,\n          success: function() {\n            window.location.href = webAppPath + \"/plugin/IvyGS/api/main\";\n          },\n          error: function() {\n            alert( \"Error on checkout the code. If the plugin doesn't work anymore, please use the git command line on system folder to fix.\" );\n          }\n        });\n        \n    }\n\nfunction cloneTagDialog(tagName){\n    $('#modal-clone-tag .btn.btn-ok').unbind( \"click\", modalOkBtn);\n    $('#modal-clone-tag #modal-clone-label').text(\"Checkout \"+tagName+\" tag\");\n    $('#modal-clone-tag .modal-body').empty();\n    $('#modal-clone-tag .modal-body').append(\"<p>Are you sure, you want checkout \"+tagName+\" tag?</p>\");\n    $('#modal-clone-tag').modal({keyboard: false, backdrop: \"static\"}).modal('show');\n    \n    $('#modal-clone-tag .modal-footer img').remove();\n    \n    window.IvyGS={tagName:tagName};\n    \n    $('#modal-clone-tag .btn.btn-ok').bind( \"click\", modalOkBtn);\n \n} ",
+      "type": "Resource"
+     }
+    ]
+   },
+   {
+    "id": "cf5ee7b4-f105-f67f-e252-c3cc0366ca3e",
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "TIMELINE_CSS",
+      "type": "Id"
+     },
+     {
+      "name": "resourceType",
+      "value": "Css",
+      "type": "Label"
+     },
+     {
+      "name": "resourceCode",
+      "value": ".timeline {\n  list-style: none;\n  padding: 20px 0 20px;\n  position: relative;\n}\n.timeline:before {\n  top: 0;\n  bottom: 0;\n  position: absolute;\n  content: \" \";\n  width: 3px;\n  background-color: #eeeeee;\n  left: 50%;\n  margin-left: -1.5px;\n}\n.timeline > li {\n  margin-bottom: 20px;\n  position: relative;\n}\n.timeline > li:before,\n.timeline > li:after {\n  content: \" \";\n  display: table;\n}\n.timeline > li:after {\n  clear: both;\n}\n.timeline > li:before,\n.timeline > li:after {\n  content: \" \";\n  display: table;\n}\n.timeline > li:after {\n  clear: both;\n}\n.timeline > li > .timeline-panel {\n  width: 46%;\n  float: left;\n  border: 1px solid #d4d4d4;\n  border-radius: 2px;\n  padding: 20px;\n  position: relative;\n  -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);\n  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);\n}\n.timeline > li > .timeline-panel:before {\n  position: absolute;\n  top: 26px;\n  right: -15px;\n  display: inline-block;\n  border-top: 15px solid transparent;\n  border-left: 15px solid #ccc;\n  border-right: 0 solid #ccc;\n  border-bottom: 15px solid transparent;\n  content: \" \";\n}\n.timeline > li > .timeline-panel:after {\n  position: absolute;\n  top: 27px;\n  right: -14px;\n  display: inline-block;\n  border-top: 14px solid transparent;\n  border-left: 14px solid #fff;\n  border-right: 0 solid #fff;\n  border-bottom: 14px solid transparent;\n  content: \" \";\n}\n.timeline > li > .timeline-badge {\n  color: #fff;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  font-size: 1.4em;\n  text-align: center;\n  position: absolute;\n  top: 16px;\n  left: 50%;\n  margin-left: -25px;\n  background-color: #999999;\n  z-index: 100;\n  border-top-right-radius: 50%;\n  border-top-left-radius: 50%;\n  border-bottom-right-radius: 50%;\n  border-bottom-left-radius: 50%;\n}\n.timeline > li.timeline-inverted > .timeline-panel {\n  float: right;\n}\n.timeline > li.timeline-inverted > .timeline-panel:before {\n  border-left-width: 0;\n  border-right-width: 15px;\n  left: -15px;\n  right: auto;\n}\n.timeline > li.timeline-inverted > .timeline-panel:after {\n  border-left-width: 0;\n  border-right-width: 14px;\n  left: -14px;\n  right: auto;\n}\n.timeline-badge.primary {\n  background-color: #2e6da4 !important;\n}\n.timeline-badge.success {\n  background-color: #3f903f !important;\n}\n.timeline-badge.warning {\n  background-color: #f0ad4e !important;\n}\n.timeline-badge.danger {\n  background-color: #d9534f !important;\n}\n.timeline-badge.info {\n  background-color: #5bc0de !important;\n}\n.timeline-title {\n  margin-top: 0;\n  color: inherit;\n}\n.timeline-body > p,\n.timeline-body > ul {\n  margin-bottom: 0;\n}\n.timeline-body > p + p {\n  margin-top: 5px;\n} ",
+      "type": "Resource"
+     }
+    ]
+   },
+   {
+    "id": "dfcd633c-cf5c-51bf-23cf-1c4baa415ae4",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "502476af-64cb-0a4a-bf68-cfaa9afd0edd",
+    "type": "LayoutColumn",
+    "typeDesc": "Column",
+    "parent": "dfcd633c-cf5c-51bf-23cf-1c4baa415ae4",
+    "properties": [
+     {
+      "name": "name",
+      "value": "TIMELINE",
+      "type": "Id"
+     },
+     {
+      "name": "columnSpan",
+      "value": "12",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrepend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnAppend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrependTop",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnAppendBottom",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBigBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "8a9a40aa-cd0f-edb6-c522-6229c78032de",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "95e5580d-21b8-e745-cd8b-af2620b5c86b",
+    "type": "LayoutColumn",
+    "typeDesc": "Column",
+    "parent": "8a9a40aa-cd0f-edb6-c522-6229c78032de",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "columnSpan",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrepend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnAppend",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "columnPrependTop",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnAppendBottom",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "columnBigBorder",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "9ba91cbb-eb42-7a04-991c-e9a157b19235",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "95e5580d-21b8-e745-cd8b-af2620b5c86b",
+    "properties": [
+     {
+      "name": "name",
+      "value": "CLONE_DIALOG",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"modal fade\" id=\"modal-clone-tag\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"modal-clone-label\" aria-hidden=\"true\">\n  <div class=\"modal-dialog\">\n    <div class=\"modal-content\">\n      <div class=\"modal-header\">\n        <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n        <h4 class=\"modal-title\" id=\"modal-clone-label\">Checkout {{tagName}} tag</h4>\n      </div>\n      <div class=\"modal-body\">\n        <p>Are you sure, you want checkout {{tagName}} tag?</p>\n      </div>\n      <div class=\"modal-footer\">\n        <button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">Close</button>\n        <button type=\"button\" class=\"btn btn-success btn-ok\">Ok</button>\n      </div>\n    </div>\n  </div>\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   }
+  ]
+ },
+ "components": {
+  "rows": [
+   {
+    "id": "OTHERCOMPONENTS",
+    "name": "Others",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Others",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "26bfed66-9e84-c726-38dd-d163b07dcf5c",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "GET_TAGS",
+      "type": "Id"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "resultvar",
+      "value": "",
+      "type": "Result"
+     },
+     {
+      "name": "dataSource",
+      "value": "TAGS",
+      "type": "Datasource"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${p:TIMELINE}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "function(data){\n    console.log(data);\n    if(data.resultset!=undefined&&data.resultset.length>0&&data.resultset[0].length>0&&data.resultset[0][0]!=\"Repository not found\"){\n        $(\"#\"+this.htmlObject).append('<div class=\"page-header\"><h1 id=\"timeline\">Tags</h1></div>');\n        $(\"#\"+this.htmlObject).append('<ul class=\"timeline\" style=\"margin-bottom: 50px;\"></ul>');\n        for(i=0;i<data.resultset.length;i++){\n            var timelineInverted=\"\";if(i%2==0){timelineInverted=\"timeline-inverted\";}\n            var tagName = data.resultset[i][2].substring(data.resultset[i][2].lastIndexOf(\"/\")+1,data.resultset[i][2].length).trim();\n            $(\"#\"+this.htmlObject+\" ul.timeline\").prepend('<li class=\"'+timelineInverted+'\"><div class=\"timeline-badge success\"><i class=\"glyphicon glyphicon-check\"></i></div><div class=\"timeline-panel\" style=\"word-break: break-word;\"></div></li>');\n            $(\"#\"+this.htmlObject+\" ul.timeline .timeline-panel:first\").append('<div class=\"timeline-heading\"><a href=\"#\" onclick=\"cloneTagDialog(\\''+tagName+'\\');\"><h4 class=\"timeline-title\">'+tagName+' <small>('+(data.resultset[i][2]||\"\")+')</small></h4></a>' +\n              '<p><small class=\"text-muted\">'+(data.resultset[i][5]?'<i class=\"glyphicon glyphicon-time\"></i> '+data.resultset[i][5]+' via '+data.resultset[i][6]:\"\")+'</small></p>' +\n            '</div>');\n            $(\"#\"+this.htmlObject+\" ul.timeline .timeline-panel:first\").append('<div class=\"timeline-body\"><p>'+(data.resultset[i][3]||\"\")+'</p><p><small>'+(data.resultset[i][7]||\"\")+'</small></p></div>')\n        }\n        \n        $(\"#\"+this.htmlObject+\" ul.timeline\").append('<li><div class=\"timeline-badge\"><i class=\"fa fa-clock-o\"></i></div></li>');\n    }\n}",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   }
+  ]
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "IVYGS_CPKENDPOINTS",
+    "name": "IVYGS Endpoints",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "IVYGS Endpoints",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "a03d5b83-438b-a579-1d16-633238a99a13",
+    "type": "ComponentsIvyGS_getTags_CPKENDPOINT",
+    "typeDesc": "getTags Endpoint",
+    "parent": "IVYGS_CPKENDPOINTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "TAGS",
+      "type": "Id"
+     },
+     {
+      "name": "stepName",
+      "value": "OUTPUT",
+      "type": "String"
+     },
+     {
+      "name": "kettleOutput",
+      "value": "Inferred",
+      "type": "kettleOutputCustom"
+     }
+    ],
+    "meta": "CPK",
+    "meta_pluginId": "IvyGS",
+    "meta_endpoint": "getTags"
+   }
+  ]
+ },
+ "filename": "/system/IvyGS/dashboards/admin/tags.cdfde"
+}
