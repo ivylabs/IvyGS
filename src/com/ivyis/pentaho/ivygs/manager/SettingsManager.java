@@ -242,10 +242,33 @@ public final class SettingsManager {
     bos.close();
   }
 
-  private void saveSettings(Settings settings) throws ParserConfigurationException,
+  public void saveSettings(Settings settings) throws ParserConfigurationException,
   TransformerException {
     final DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
     final DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+    if(settings==null){
+    	settings =new Settings();
+    }
+    final File etlRepoFolder = new File(PentahoSystem
+            .getApplicationContext().getSolutionRootPath()
+            + File.separator
+            + SETTINGS_FOLDER
+            + File.separator
+            + "repo");
+    if(!etlRepoFolder.exists()){
+    	etlRepoFolder.mkdirs();
+    }
+    settings.setEtlFolderPath(etlRepoFolder.getAbsolutePath());
+    final File gitRepoFolderPath = new File(PentahoSystem.getApplicationContext()
+            .getSolutionRootPath()
+            + File.separator
+            + IVYGS_GIT_REPOS_FOLDER
+            + File.separator
+            + "repo");
+    if(!gitRepoFolderPath.exists()){
+    	gitRepoFolderPath.mkdirs();
+    }
+    settings.setGitRepoFolderPath(gitRepoFolderPath.getAbsolutePath());
 
     // root elements
     final Document doc = docBuilder.newDocument();

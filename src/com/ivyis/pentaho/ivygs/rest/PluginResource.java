@@ -54,6 +54,7 @@ public class PluginResource extends CpkApi {
   public StreamingOutput checkLicense(@PathParam("pluginId") String pluginId)
       throws WebApplicationException {
     try {
+    	SettingsManager.getInstance().saveSettings(SettingsManager.getInstance().getSettings());
       return toStreamingOutput(new JsonResult(true,
           String.valueOf(PluginConfig.getInstance().checkLicense())));
     } catch (Exception e) {

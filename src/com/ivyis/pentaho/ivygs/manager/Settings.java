@@ -19,6 +19,9 @@ public class Settings {
   public Settings() {
     this.pointCheckout = "master";
     this.creationDate = new Date();
+    this.gitURL = "";
+    this.gitUserName = "";
+    this.gitPassword = "";
   }
 
   public Settings(String gitURL, String gitUserName, String gitPassword,

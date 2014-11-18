@@ -9,10 +9,10 @@
 	<property name="stage.dir" value="${bin.dir}/stage" description="Name of the resource directory" />
 	<tstamp />
 	<!-- Build the project.revision property -->
-	<property name="distribution.version" value="${project.stage}-${project.version}" />
+	<property name="distribution.version" value="${project.revision}" />
 	<echo>distribution.version = ${distribution.version}</echo>
 	<property name="plugin.artifact.id" value="${plugin.name}" />
-	<property name="plugin.zipfile" value="${plugin.artifact.id}-${distribution.version}.zip" />
+	<property name="plugin.zipfile" value="${plugin.artifact.id}.zip" />
 
 	<target name="checkstyle" description="Generates a report of code convention violations." depends="init-checkstyle">
 		<!-- See http://checkstyle.sourceforge.net/anttask.html for full options of using checkstyle with ant-->
@@ -75,7 +75,7 @@
 		<!-- create the version file -->
 		<tstamp />
 		<property name="sequential.build.id" value="manual-${DSTAMP}" />
-		<echo file="${stage.dir}/${plugin.name}/version.xml" message="&lt;version branch='TRUNK' buildId='${sequential.build.id}'>${distribution.version}&lt;/version>" />
+		<echo file="${stage.dir}/${plugin.name}/version.xml" message="&lt;version branch='STABLE' buildId='${sequential.build.id}'>${distribution.version}&lt;/version>" />
 		<!-- create a zip file -->
 		<zip zipfile="${dist.dir}/${plugin.zipfile}" basedir="${stage.dir}" includes="${plugin.name}/**/*" excludes="**/Thumbs.db" />
 
@@ -87,8 +87,7 @@
 		&lt;description>@PLUGIN_PACKAGE_DESCRIPTION&lt;/description>
 		&lt;build_id>${sequential.build.id}&lt;/build_id>
 		&lt;/version>	</echo>
-		<move tofile="${dist.dir}/${ivy.artifact.id}-${project.revision}.zip" file="${dist.dir}/${plugin.zipfile}" />
-
+		
 
 	</target>
 	<!--=======================================================================

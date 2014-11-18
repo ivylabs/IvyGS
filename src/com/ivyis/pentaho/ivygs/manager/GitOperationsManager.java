@@ -34,6 +34,9 @@ public class GitOperationsManager {
   NoHeadException, GitAPIException {
     final Settings settings = SettingsManager.getInstance().refresh()
         .getSettings();
+    if(settings==null||settings.getRepoName()==null){
+    	return false;
+    }
     final Repository repository = FileRepositoryBuilder.create(new File(
         PentahoSystem.getApplicationContext().getSolutionRootPath()
         + File.separator + PluginConfig.PLUGIN_NAME
