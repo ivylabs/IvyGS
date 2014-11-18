@@ -98,7 +98,7 @@
 		<dependency org="com.googlecode.json-simple" name="json-simple"
 			rev="1.1.1" conf='runtime->default' />
 		<dependency org="org.eclipse.jgit" name="org.eclipse.jgit"
-			rev="3.2.0.201312181205-r" conf='runtime->default' />
+			rev="3.2.0.201312181205-r" conf='default->default' />
 		<dependency org="com.puppycrawl.tools" name="checkstyle"
 			rev="5.7" />
 	</dependencies>
