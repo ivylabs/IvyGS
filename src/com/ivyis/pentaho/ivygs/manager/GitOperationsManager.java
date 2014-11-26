@@ -31,60 +31,70 @@ public class GitOperationsManager {
       .getLogger(GitOperationsManager.class);
 
   public static boolean checkNumNewCommits() throws IOException,
-  NoHeadException, GitAPIException {
-    final Settings settings = SettingsManager.getInstance().refresh()
-        .getSettings();
-    if(settings==null||settings.getRepoName()==null){
-    	return false;
-    }
-    final Repository repository = FileRepositoryBuilder.create(new File(
-        PentahoSystem.getApplicationContext().getSolutionRootPath()
-        + File.separator + PluginConfig.PLUGIN_NAME
-        + File.separator + settings.getRepoName(), ".git"));
+      NoHeadException, GitAPIException {
+    try {
+      final Settings settings = SettingsManager.getInstance().refresh()
+          .getSettings();
+      if (settings == null || settings.getRepoName() == null) {
+        return false;
+      }
+      final Repository repository = FileRepositoryBuilder
+          .create(new File(PentahoSystem.getApplicationContext()
+              .getSolutionRootPath()
+              + File.separator
+              + PluginConfig.PLUGIN_NAME
+              + File.separator
+              + settings.getRepoName(), ".git"));
 
-    final Git git = new Git(repository);
-    final RevWalk walk = new RevWalk(repository);
+      final Git git = new Git(repository);
+      final RevWalk walk = new RevWalk(repository);
 
-    final Iterable<Ref> commits = git
-        .lsRemote()
-        .setCredentialsProvider(
-            new UsernamePasswordCredentialsProvider(settings
-                .getGitUserName(), settings.getGitPassword()))
-                .setTags(true).setHeads(true).call();
+      final Iterable<Ref> commits = git
+          .lsRemote()
+          .setCredentialsProvider(
+              new UsernamePasswordCredentialsProvider(settings
+                  .getGitUserName(), settings
+                  .getGitPassword())).setTags(true)
+          .setHeads(true).call();
 
-    for (Ref commit : commits) {
+      for (Ref commit : commits) {
 
-      for (Map.Entry<String, Ref> e : repository.getAllRefs().entrySet()) {
-        if (e.getKey().startsWith(Constants.R_HEADS)) {
-          boolean parsed = true;
-          try {
-            walk.parseCommit(commit.getObjectId());
-          } catch (Exception ex) {
-            parsed = false;
-          }
-          if ((repository.resolve(commit.getName()) == null
-              || walk.parseCommit(repository.resolve(commit
-                  .getName())) == null || (!parsed || !walk
-                      .isMergedInto(walk.parseCommit(walk
-                          .parseCommit(commit.getObjectId())), walk
-                          .parseCommit(e.getValue().getObjectId()))))
-                          && commit.getName().contains(
-                              settings.getPointCheckout())
-                              && commit
-                              .getName()
-                              .substring(
-                                  commit.getName()
-                                  .lastIndexOf(
-                                      settings.getPointCheckout()),
-                                      commit.getName().length())
-                                      .equals(settings.getPointCheckout())) {
-            git.close();
-            return true;
+        for (Map.Entry<String, Ref> e : repository.getAllRefs()
+            .entrySet()) {
+          if (e.getKey().startsWith(Constants.R_HEADS)) {
+            boolean parsed = true;
+            try {
+              walk.parseCommit(commit.getObjectId());
+            } catch (Exception ex) {
+              parsed = false;
+            }
+            if ((repository.resolve(commit.getName()) == null
+                || walk.parseCommit(repository.resolve(commit
+                    .getName())) == null || (!parsed || !walk
+                .isMergedInto(walk.parseCommit(walk
+                    .parseCommit(commit.getObjectId())),
+                    walk.parseCommit(e.getValue()
+                        .getObjectId()))))
+                && commit.getName().contains(
+                    settings.getPointCheckout())
+                && commit
+                    .getName()
+                    .substring(
+                        commit.getName()
+                            .lastIndexOf(
+                                settings.getPointCheckout()),
+                        commit.getName().length())
+                    .equals(settings.getPointCheckout())) {
+              git.close();
+              return true;
+            }
           }
         }
       }
+      git.close();
+    } catch (Exception e) {
+      return false;
     }
-    git.close();
 
     return false;
   }
@@ -103,14 +113,14 @@ public class GitOperationsManager {
       }
 
       Git.cloneRepository()
-      .setURI(settings.getGitURL())
-      .setDirectory(gitRepoFolder)
-      .setBranch(settings.getPointCheckout())
-      .setCloneAllBranches(true)
-      .setCredentialsProvider(
-          new UsernamePasswordCredentialsProvider(settings
-              .getGitUserName(), settings
-              .getGitPassword())).setBare(false).call();
+          .setURI(settings.getGitURL())
+          .setDirectory(gitRepoFolder)
+          .setBranch(settings.getPointCheckout())
+          .setCloneAllBranches(true)
+          .setCredentialsProvider(
+              new UsernamePasswordCredentialsProvider(settings
+                  .getGitUserName(), settings
+                  .getGitPassword())).setBare(false).call();
       return true;
     } catch (InvalidRemoteException e) {
       LOG.warn(e.getMessage(), e);

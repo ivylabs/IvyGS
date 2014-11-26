@@ -126,8 +126,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>64</xloc>
-      <yloc>96</yloc>
+      <xloc>160</xloc>
+      <yloc>192</yloc>
       </entry>
     <entry>
       <name>Success</name>
@@ -136,8 +136,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>448</xloc>
-      <yloc>96</yloc>
+      <xloc>576</xloc>
+      <yloc>480</yloc>
       </entry>
     <entry>
       <name>Unzip file</name>
@@ -148,7 +148,7 @@
       <wildcardexclude/>
       <targetdirectory>&#x24;&#x7b;cpk.solution.system.dir&#x7d;&#x2f;kettle&#x2f;plugins</targetdirectory>
       <movetodirectory/>
-      <afterunzip>0</afterunzip>
+      <afterunzip>1</afterunzip>
       <addfiletoresult>N</addfiletoresult>
       <isfromprevious>N</isfromprevious>
       <adddate>N</adddate>
@@ -167,14 +167,88 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>256</xloc>
-      <yloc>96</yloc>
+      <xloc>576</xloc>
+      <yloc>192</yloc>
+      </entry>
+    <entry>
+      <name>Checks IvyGitSteps exist</name>
+      <description/>
+      <type>FILES_EXIST</type>
+      <filename/>
+      <fields>
+        <field>
+          <name>&#x24;&#x7b;cpk.plugin.dir&#x7d;&#x2f;static&#x2f;kettlePlugins&#x2f;IvyGitSteps.zip</name>
+        </field>
+      </fields>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>320</xloc>
+      <yloc>192</yloc>
+      </entry>
+    <entry>
+      <name>create .installed file</name>
+      <description/>
+      <type>CREATE_FILE</type>
+      <filename>&#x24;&#x7b;cpk.plugin.dir&#x7d;&#x2f;.installed</filename>
+      <fail_if_file_exists>N</fail_if_file_exists>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>480</xloc>
+      <yloc>320</yloc>
+      </entry>
+    <entry>
+      <name>Checks .installed2 exist</name>
+      <description/>
+      <type>FILES_EXIST</type>
+      <filename/>
+      <fields>
+        <field>
+          <name>&#x24;&#x7b;cpk.plugin.dir&#x7d;&#x2f;.installed2</name>
+        </field>
+      </fields>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>160</xloc>
+      <yloc>320</yloc>
+      </entry>
+    <entry>
+      <name>create .installed2 file</name>
+      <description/>
+      <type>CREATE_FILE</type>
+      <filename>&#x24;&#x7b;cpk.plugin.dir&#x7d;&#x2f;.installed2</filename>
+      <fail_if_file_exists>N</fail_if_file_exists>
+      <add_filename_result>N</add_filename_result>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>160</xloc>
+      <yloc>480</yloc>
+      </entry>
+    <entry>
+      <name>Checks .installed exist</name>
+      <description/>
+      <type>FILES_EXIST</type>
+      <filename/>
+      <fields>
+        <field>
+          <name>&#x24;&#x7b;cpk.plugin.dir&#x7d;&#x2f;.installed</name>
+        </field>
+      </fields>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>320</xloc>
+      <yloc>320</yloc>
       </entry>
   </entries>
   <hops>
     <hop>
       <from>START</from>
-      <to>Unzip file</to>
+      <to>Checks IvyGitSteps exist</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -188,7 +262,70 @@
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Checks .installed2 exist</from>
+      <to>create .installed2 file</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Checks IvyGitSteps exist</from>
+      <to>Unzip file</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Checks IvyGitSteps exist</from>
+      <to>Checks .installed exist</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Checks .installed exist</from>
+      <to>create .installed file</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Checks .installed exist</from>
+      <to>Checks .installed2 exist</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>create .installed file</from>
+      <to>Success</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>create .installed2 file</from>
+      <to>Success</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
     </hop>
   </hops>
   <notepads>

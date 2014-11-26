@@ -62,6 +62,16 @@
 				<exclude name=".classpath" />
 			</fileset>
 		</copy>
+		<copy todir="./lib" overwrite="true">
+			<fileset dir="${devlib.dir}">
+				<include name="*.jar" />
+			</fileset>
+		</copy>
+		<copy todir="${stage.dir}/${plugin.name}/lib" overwrite="true">
+			<fileset dir="${devlib.dir}">
+				<include name="*.jar" />
+			</fileset>
+		</copy>
 		<copy todir="${stage.dir}/${plugin.name}/lib" overwrite="true">
 			<fileset dir="${dist.dir}">
 				<include name="${ivy.artifact.id}-${project.revision}.jar" />
