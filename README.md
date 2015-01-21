@@ -10,7 +10,7 @@ Is possible found [here](https://github.com/ivylabs/IvyGS/raw/master/samples/Ivy
 
 ###Compile
 
-You can checkout this code on <Pentahao-folder-path>/biserver-ce/pentaho-solutions/system an then complie using the command:
+You can checkout this code on _<Pentahao-folder-path>/biserver-ce/pentaho-solutions/system_ an then complie using the command:
 ```bash
 ant clean-all resolve dist
 ```
