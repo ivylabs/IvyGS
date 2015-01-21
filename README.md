@@ -15,7 +15,6 @@ ant clean-all resolve dist
 Then you just need restart your Pentaho BI server.
 
 ##Next features:
-* New application template
 * Multi-project support
 * More & better analysis
 * Performance
