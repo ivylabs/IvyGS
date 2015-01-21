@@ -73,6 +73,7 @@
     <partitionschemas>
     </partitionschemas>
     <slaveservers>
+         <slaveserver><name>localhost</name><hostname>localhost</hostname><port>8877</port><webAppName/><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname/><proxy_port/><non_proxy_hosts/><master>Y</master></slaveserver>
     </slaveservers>
     <clusterschemas>
     </clusterschemas>
@@ -432,7 +433,7 @@ public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws K
     <fields>
       <field>
         <name>installedFile</name>
-        <variable>&#x24;&#x7b;cpk.plugin.dir&#x7d;&#x2f;.installed2</variable>
+        <variable>&#x24;&#x7b;cpk.plugin.dir&#x7d;.installed2</variable>
         <type>String</type>
         <format/>
         <currency/>

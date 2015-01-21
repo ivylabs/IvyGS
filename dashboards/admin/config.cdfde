@@ -3,10 +3,134 @@
   "title": "config",
   "rows": [
    {
-    "id": "8b1ccfd5-d953-eb8f-8d98-83c5c63c71ac",
+    "id": "95972d82-0f34-fcf3-8f85-1e1ee1e66a9e",
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "opts",
+      "type": "Id"
+     },
+     {
+      "name": "resourceType",
+      "value": "Javascript",
+      "type": "Label"
+     },
+     {
+      "name": "resourceCode",
+      "value": "var dashboardProperties = {\n    name: \"config\",\n    mainTitle: \"IvyGS Configuration & Documentation\"\n}; ",
+      "type": "Resource"
+     }
+    ]
+   },
+   {
+    "id": "f91e1705-2a93-8799-9646-da52d18fd49e",
     "type": "LayoutRow",
     "typeDesc": "Row",
     "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "118dcad2-eaaa-9f67-efd6-2723905a2a1c",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "f91e1705-2a93-8799-9646-da52d18fd49e",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "basic-login",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "8b1ccfd5-d953-eb8f-8d98-83c5c63c71ac",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "118dcad2-eaaa-9f67-efd6-2723905a2a1c",
     "properties": [
      {
       "name": "name",
@@ -150,7 +274,7 @@
     "id": "ee812155-5404-6a01-5fd0-d9ab8e230d7d",
     "type": "LayoutRow",
     "typeDesc": "Row",
-    "parent": "UnIqEiD",
+    "parent": "118dcad2-eaaa-9f67-efd6-2723905a2a1c",
     "properties": [
      {
       "name": "name",
@@ -260,7 +384,7 @@
      },
      {
       "name": "html",
-      "value": "<form id=\"configSettings\" class=\"form-horizontal\" role=\"form\" action=\"configSettings\" method=\"POST\" enctype=\"multipart/form-data\">\n  <div class=\"form-group\">\n    <label for=\"DIV_SERVER_URL\" class=\"col-sm-2 control-label\">Git Clone URL</label>\n    <div class=\"col-sm-10\" id=\"DIV_GIT_CLONE_URL\">\n        <input type=\"text\" class=\"form-control\" name=\"gitCloneURL\" id=\"gitCloneURL\" placeholder=\"Git Clone URL\">\n    </div>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"DIV_SERVER_USERNAME\" class=\"col-sm-2 control-label\">Username</label>\n    <div class=\"col-sm-10\" id=\"DIV_GIT_USERNAME\">\n        <input type=\"text\" class=\"form-control\" name=\"gitUsername\" id=\"gitUsername\" placeholder=\"Git Username\">\n    </div>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"DIV_SERVER_PASSWORD\" class=\"col-sm-2 control-label\">Password</label>\n    <div class=\"col-sm-10\" id=\"DIV_GIT_PASSWORD\">\n        <input type=\"password\" class=\"form-control\" name=\"gitPassword\" id=\"gitPassword\" placeholder=\"Git Password\">\n    </div>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"DIV_SERVER_PASSWORD\" class=\"col-sm-2 control-label\">ETL Package</label> \n    <div class=\"col-sm-10\">\n        <input type=\"file\" name=\"etlFile\" id=\"etlFile\" accept=\"application/zip\">\n    </div>\n  </div>\n  <div class=\"form-group\">\n    <div class=\"progress hide\">\n      <div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\">\n        0%\n      </div>\n    </div>\n  </div>\n  <div class=\"form-group\">\n    <div class=\"col-sm-offset-4 col-sm-2\" id=\"BACK_BUTTON\">\n    </div>\n    <div class=\"col-sm-2\" id=\"DIV_SUBMIT_BUTTON\">\n        <button type=\"button\" class=\"btn btn-default submitForm\">Submit</button>\n    </div>\n  </div>\n</form> ",
+      "value": "<ul id=\"configTabs\" class=\"nav nav-tabs nav-justified\" data-tabs=\"tabs\">\n  <li class=\"active\"><a href=\"#configForm\" data-toggle=\"tab\">Configuration</a></li>\n  <li><a href=\"#docText\" data-toggle=\"tab\">Documentation</a></li>\n</ul>\n<div id=\"config-tab-content\" class=\"tab-content\">\n    <div class=\"tab-pane active\" id=\"configForm\">\n        <form id=\"configSettings\" class=\"form-horizontal\" role=\"form\" action=\"configSettings\" method=\"POST\" enctype=\"multipart/form-data\">\n          <div class=\"form-group\">\n            <label for=\"DIV_SERVER_URL\" class=\"col-sm-2 control-label\">Git Clone URL</label>\n            <div class=\"col-sm-10\" id=\"DIV_GIT_CLONE_URL\">\n                <input type=\"text\" class=\"form-control\" name=\"gitCloneURL\" id=\"gitCloneURL\" placeholder=\"Git Clone URL\">\n            </div>\n          </div>\n          <div class=\"form-group\">\n            <label for=\"DIV_SERVER_USERNAME\" class=\"col-sm-2 control-label\">Username</label>\n            <div class=\"col-sm-10\" id=\"DIV_GIT_USERNAME\">\n                <input type=\"text\" class=\"form-control\" name=\"gitUsername\" id=\"gitUsername\" placeholder=\"Git Username\">\n            </div>\n          </div>\n          <div class=\"form-group\">\n            <label for=\"DIV_SERVER_PASSWORD\" class=\"col-sm-2 control-label\">Password</label>\n            <div class=\"col-sm-10\" id=\"DIV_GIT_PASSWORD\">\n                <input type=\"password\" class=\"form-control\" name=\"gitPassword\" id=\"gitPassword\" placeholder=\"Git Password\">\n            </div>\n          </div>\n          <div class=\"form-group\">\n            <label for=\"DIV_SERVER_PASSWORD\" class=\"col-sm-2 control-label\">ETL Package</label> \n            <div class=\"col-sm-10\">\n                <input type=\"file\" name=\"etlFile\" id=\"etlFile\" accept=\"application/zip\">\n            </div>\n          </div>\n          <div class=\"form-group\">\n            <div class=\"progress hide\">\n              <div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"0\" aria-valuemin=\"0\" aria-valuemax=\"100\" style=\"width: 0%;\">\n                0%\n              </div>\n            </div>\n          </div>\n          <div class=\"form-group\">\n            <div class=\"col-sm-offset-4 col-sm-2\" id=\"BACK_BUTTON\">\n            </div>\n            <div class=\"col-sm-2\" id=\"DIV_SUBMIT_BUTTON\">\n                <button type=\"button\" class=\"btn btn-default submitForm\">Submit</button>\n            </div>\n          </div>\n        </form> \n    </div>\n    <div class=\"tab-pane\" id=\"docText\">\n        <div class=\"col-md12\">\n            <h3>Short documentation</h3>\n        </div>\n        <div class=\"col-md12\">\n            <p>This plugin should be ready for use after two restarts, if not please open a issue in <a href=\"https://github.com/ivylabs/IvyGS/issues\" target=\"_blank\">github</a> for find out the problem.</p>\n            <p><b>IvyGS - Ivy Git Sysnc</b> is a Sparkl plugin for help sinchronizer your BI solution that is storage in a git repository. What is necessary for start work is set your git repository url and the credentials. There're an ETL package that you need develop. This ETL is responsable for delete/modify/add files in your pentaho solution and other actions.</p>\n            <p>In the ETL package is mandatory have transformation with the name <b>main.ktr</b> and you need define the following parameters:</p>\n            <ul>\n                <li><b>GitCloneURL</b> - The Git repository URL</li>\n                <li><b>GitUsername</b> - The remote Git repository username</li>\n                <li><b>GitPassword</b> - The remote Git repository password</li>\n                <li><b>GitReposFolderPath</b> - The Git local repository in the server</li>\n                <li><b>ETLFolderPath</b> - The server file system where the ETL package is storage</li>\n                <li><b>ProjectName</b> - The IvyGS project name, at the moment the plugin just support single projects. The default name is <i>repo</i>.</li>\n            </ul>\n            <p>You can found a ETL package example <a target=\"_blank\" href=\"https://github.com/ivylabs/IvyGS/raw/master/samples/IvyDC-Deployer-Sample.zip\">here</a>. This sample basically copy and upload all the IvyDC dashbaords to the Pentaho JCR repository. Is a good example for you start learn.</p>\n            <p>Note: Before start develop you need make sure you have a good folders structure in your Git repository for help with the maintenance of the solution and the ETL package.</p>\n        </div>\n    </div> \n</div> ",
       "type": "Html"
      },
      {
@@ -298,7 +422,7 @@
      },
      {
       "name": "resourceCode",
-      "value": "\n\nfunction progressHandlingFunction(e){\n    if(e.lengthComputable){\n        $('.progress').removeClass(\"hide\").show();\n        var loaded = e.loaded===0?0:(e.total*100)/e.loaded;\n        loaded = loaded<100?100:loaded;\n        $('.progress .progress-bar').css(\"width\", sprintf(\"%.2f\",loaded)+\"%\");\n        $('.progress .progress-bar').attr({\"aria-valuenow\":sprintf(\"%.2f\",loaded)});\n        $('.progress .progress-bar').text(sprintf(\"%.2f\",loaded)+\"%\");\n        $('.progress .progress-bar').css(\"width\", sprintf(\"%.2f\",loaded)+\"%\");\n    }\n} \n\n\n\n$('#DIV_SUBMIT_BUTTON button.submitForm').click(function(){\n    $('#DIV_SUBMIT_BUTTON button, #BACK_BUTTON button').addClass(\"disabled\");\n    $(\"#SUBMITTED_RESULT\").prepend(\"<div class='row img-loading'><div class='col-md-12'><center><img src='\"+webAppPath+\"/api/repos/IvyGS/static/custom/img/loading.gif'/></center></div></div>\");\n    var formData = new FormData($('form')[0]);\n    $.ajax({\n        url: 'configSettings',  //Server script to process data\n        type: 'POST',\n        xhr: function() {  // Custom XMLHttpRequest\n            var myXhr = $.ajaxSettings.xhr();\n            if(myXhr.upload){ // Check if upload property exists\n                myXhr.upload.addEventListener('progress',progressHandlingFunction, false); // For handling the progress of the upload\n            }\n            return myXhr;\n        },\n        //Ajax events\n        beforeSend: function(){console.log(\"beforeSend\");},\n        success: function(data){\n            $('#DIV_SUBMIT_BUTTON button, #BACK_BUTTON button').removeClass(\"disabled\");\n            $(\"#SUBMITTED_RESULT .row.img-loading\").remove();\n            \n            $('.progress').delay( 800 ).fadeOut( 400 ).hide(800);\n            $('.progress .progress-bar').delay( 800 ).css(\"width\", \"0%\");\n            $('.progress .progress-bar').delay( 800 ).attr({\"aria-valuenow\":0});\n            $('.progress .progress-bar').delay( 800 ).text(\"0%\");\n            $('.progress .progress-bar').delay( 800 ).css(\"width\", \"0%\");\n            \n            var dataResult = $.parseJSON(data);\n            var alertType = \"danger\";\n            var alertMsg = \"<strong id='alert-result'>Erorr!</strong> On update configuration.\";\n            if(dataResult.status==\"ok\"&&dataResult.result==\"true\"){\n                alertType = \"success\";\n                alertMsg = \"<strong id='alert-result'>Success!</strong> Configuration update.\";\n            }\n            $(\"#SUBMITTED_RESULT .alert\").removeClass(\"alert-success\").removeClass(\"alert-danger\");\n            $(\"#SUBMITTED_RESULT .alert\").addClass(\"alert-\"+alertType);\n            $(\"#SUBMITTED_RESULT .alert\").html('<button type=\"button\" class=\"close\">\\\n                    <span>&times;</span><span class=\"sr-only\">Close</span>\\\n                </button>'+alertMsg);\n            \n            $(\"#SUBMITTED_RESULT .alert\").delay( 500 ).fadeIn( 600 ).show(800);\n            \n            $('.alert .close').click(function () {\n              $(this).parents(\".alert\").fadeOut( 400 ).hide(800);\n            });\n            \n            console.log(data);\n        \n        },\n        error: function(data){console.log(data);},\n        // Form data\n        data: formData,\n        //Options to tell jQuery not to process data or worry about content-type.\n        cache: false,\n        contentType: false,\n        processData: false,\n        async: true\n    });\n}); ",
+      "value": "jQuery(document).ready(function ($) {\n    $('#configTabs').tab();\n});\n\nfunction progressHandlingFunction(e){\n    if(e.lengthComputable){\n        $('.progress').removeClass(\"hide\").show();\n        var loaded = e.loaded===0?0:(e.total*100)/e.loaded;\n        loaded = loaded<100?100:loaded;\n        $('.progress .progress-bar').css(\"width\", sprintf(\"%.2f\",loaded)+\"%\");\n        $('.progress .progress-bar').attr({\"aria-valuenow\":sprintf(\"%.2f\",loaded)});\n        $('.progress .progress-bar').text(sprintf(\"%.2f\",loaded)+\"%\");\n        $('.progress .progress-bar').css(\"width\", sprintf(\"%.2f\",loaded)+\"%\");\n    }\n} \n\n\n\n$('#DIV_SUBMIT_BUTTON button.submitForm').click(function(){\n    $('#DIV_SUBMIT_BUTTON button, #BACK_BUTTON button').addClass(\"disabled\");\n    $(\"#SUBMITTED_RESULT\").prepend(\"<div class='row img-loading'><div class='col-md-12'><center><img src='\"+webAppPath+\"/api/repos/IvyGS/static/custom/img/loading.gif'/></center></div></div>\");\n    var formData = new FormData($('form')[0]);\n    $.ajax({\n        url: 'configSettings',  //Server script to process data\n        type: 'POST',\n        xhr: function() {  // Custom XMLHttpRequest\n            var myXhr = $.ajaxSettings.xhr();\n            if(myXhr.upload){ // Check if upload property exists\n                myXhr.upload.addEventListener('progress',progressHandlingFunction, false); // For handling the progress of the upload\n            }\n            return myXhr;\n        },\n        //Ajax events\n        beforeSend: function(){console.log(\"beforeSend\");},\n        success: function(data){\n            $('#DIV_SUBMIT_BUTTON button, #BACK_BUTTON button').removeClass(\"disabled\");\n            $(\"#SUBMITTED_RESULT .row.img-loading\").remove();\n            \n            $('.progress').delay( 800 ).fadeOut( 400 ).hide(800);\n            $('.progress .progress-bar').delay( 800 ).css(\"width\", \"0%\");\n            $('.progress .progress-bar').delay( 800 ).attr({\"aria-valuenow\":0});\n            $('.progress .progress-bar').delay( 800 ).text(\"0%\");\n            $('.progress .progress-bar').delay( 800 ).css(\"width\", \"0%\");\n            \n            var dataResult = $.parseJSON(data);\n            var alertType = \"danger\";\n            var alertMsg = \"<strong id='alert-result'>Erorr!</strong> On update configuration.\";\n            if(dataResult.status==\"ok\"&&dataResult.result==\"true\"){\n                alertType = \"success\";\n                alertMsg = \"<strong id='alert-result'>Success!</strong> Configuration update.\";\n            }\n            $(\"#SUBMITTED_RESULT .alert\").removeClass(\"alert-success\").removeClass(\"alert-danger\");\n            $(\"#SUBMITTED_RESULT .alert\").addClass(\"alert-\"+alertType);\n            $(\"#SUBMITTED_RESULT .alert\").html('<button type=\"button\" class=\"close\">\\\n                    <span>&times;</span><span class=\"sr-only\">Close</span>\\\n                </button>'+alertMsg);\n            \n            $(\"#SUBMITTED_RESULT .alert\").delay( 500 ).fadeIn( 600 ).show(800);\n            \n            $('.alert .close').click(function () {\n              $(this).parents(\".alert\").fadeOut( 400 ).hide(800);\n            });\n            \n            console.log(data);\n        \n        },\n        error: function(data){console.log(data);},\n        // Form data\n        data: formData,\n        //Options to tell jQuery not to process data or worry about content-type.\n        cache: false,\n        contentType: false,\n        processData: false,\n        async: true\n    });\n}); ",
       "type": "Resource"
      }
     ]

@@ -108,6 +108,7 @@
     <partitionschemas>
     </partitionschemas>
     <slaveservers>
+         <slaveserver><name>localhost</name><hostname>localhost</hostname><port>8877</port><webAppName/><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname/><proxy_port/><non_proxy_hosts/><master>Y</master></slaveserver>
     </slaveservers>
     <clusterschemas>
     </clusterschemas>
@@ -185,10 +186,9 @@
     <gitCommands>
         <gitCommand>
           <commandProperties>
-<commandName>currentBranch</commandName>
-<fieldName>FullCurrentBranch</fieldName>
-</commandProperties>
-        </gitCommand>
+   <commandName>currentBranch</commandName>
+   <fieldName>FullCurrentBranch</fieldName>
+</commandProperties>        </gitCommand>
     </gitCommands>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -372,19 +372,18 @@ public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws K
     <gitCommands>
         <gitCommand>
           <commandProperties>
-<commandName>log</commandName>
-<commitIdField>Id</commitIdField>
-<commitNameField>Name</commitNameField>
-<commitFullMessageField>Full message</commitFullMessageField>
-<commitShortMessageField>Short message</commitShortMessageField>
-<commitAuthorDateField>Author creation date</commitAuthorDateField>
-<commitAuthorNameField>Author name</commitAuthorNameField>
-<commitAuthorEmailField>Author email</commitAuthorEmailField>
-<commitCommiterDateField>Committer creation date</commitCommiterDateField>
-<commitCommiterNameField>Committer name</commitCommiterNameField>
-<commitCommiterEmailField>Committer email</commitCommiterEmailField>
-</commandProperties>
-        </gitCommand>
+   <commandName>log</commandName>
+   <commitIdField>Id</commitIdField>
+   <commitNameField>Name</commitNameField>
+   <commitFullMessageField>Full message</commitFullMessageField>
+   <commitShortMessageField>Short message</commitShortMessageField>
+   <commitAuthorDateField>Author creation date</commitAuthorDateField>
+   <commitAuthorNameField>Author name</commitAuthorNameField>
+   <commitAuthorEmailField>Author email</commitAuthorEmailField>
+   <commitCommiterDateField>Committer creation date</commitCommiterDateField>
+   <commitCommiterNameField>Committer name</commitCommiterNameField>
+   <commitCommiterEmailField>Committer email</commitCommiterEmailField>
+</commandProperties>        </gitCommand>
     </gitCommands>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -420,7 +419,7 @@ public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws K
       </group>
       <fields>
         <field>
-          <aggregate>commits</aggregate>
+          <aggregate>Commits</aggregate>
           <subject>Id</subject>
           <type>COUNT_DISTINCT</type>
           <valuefield/>

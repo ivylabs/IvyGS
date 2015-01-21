@@ -3,6 +3,29 @@
   "title": "tags",
   "rows": [
    {
+    "id": "6d0bda2a-ea42-d8ac-af67-baa6ed74919d",
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "opts",
+      "type": "Id"
+     },
+     {
+      "name": "resourceType",
+      "value": "Javascript",
+      "type": "Label"
+     },
+     {
+      "name": "resourceCode",
+      "value": "var dashboardProperties = {\n    name: \"tags\",\n    mainTitle: \"Git Tags\"\n}; ",
+      "type": "Resource"
+     }
+    ]
+   },
+   {
     "id": "1f11821f-ef68-b2af-800f-e081fb95e50d",
     "type": "LayoutResourceCode",
     "typeDesc": "Resource",
@@ -49,10 +72,111 @@
     ]
    },
    {
-    "id": "dfcd633c-cf5c-51bf-23cf-1c4baa415ae4",
+    "id": "623b650e-69f4-a94f-9b89-f28c7b3f127a",
     "type": "LayoutRow",
     "typeDesc": "Row",
     "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "c88af3ca-3d09-a5d2-efa6-41401447bac0",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "623b650e-69f4-a94f-9b89-f28c7b3f127a",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "12",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "basic-login",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "dfcd633c-cf5c-51bf-23cf-1c4baa415ae4",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "c88af3ca-3d09-a5d2-efa6-41401447bac0",
     "properties": [
      {
       "name": "name",
@@ -163,7 +287,7 @@
     "id": "8a9a40aa-cd0f-edb6-c522-6229c78032de",
     "type": "LayoutRow",
     "typeDesc": "Row",
-    "parent": "UnIqEiD",
+    "parent": "c88af3ca-3d09-a5d2-efa6-41401447bac0",
     "properties": [
      {
       "name": "name",
@@ -384,7 +508,7 @@
      },
      {
       "name": "postFetch",
-      "value": "function(data){\n    console.log(data);\n    if(data.resultset!=undefined&&data.resultset.length>0&&data.resultset[0].length>0&&data.resultset[0][0]!=\"Repository not found\"){\n        $(\"#\"+this.htmlObject).append('<div class=\"page-header\"><h1 id=\"timeline\">Tags</h1></div>');\n        $(\"#\"+this.htmlObject).append('<ul class=\"timeline\" style=\"margin-bottom: 50px;\"></ul>');\n        for(i=0;i<data.resultset.length;i++){\n            var timelineInverted=\"\";if(i%2==0){timelineInverted=\"timeline-inverted\";}\n            var tagName = data.resultset[i][2].substring(data.resultset[i][2].lastIndexOf(\"/\")+1,data.resultset[i][2].length).trim();\n            $(\"#\"+this.htmlObject+\" ul.timeline\").prepend('<li class=\"'+timelineInverted+'\"><div class=\"timeline-badge success\"><i class=\"glyphicon glyphicon-check\"></i></div><div class=\"timeline-panel\" style=\"word-break: break-word;\"></div></li>');\n            $(\"#\"+this.htmlObject+\" ul.timeline .timeline-panel:first\").append('<div class=\"timeline-heading\"><a href=\"#\" onclick=\"cloneTagDialog(\\''+tagName+'\\');\"><h4 class=\"timeline-title\">'+tagName+' <small>('+(data.resultset[i][2]||\"\")+')</small></h4></a>' +\n              '<p><small class=\"text-muted\">'+(data.resultset[i][5]?'<i class=\"glyphicon glyphicon-time\"></i> '+data.resultset[i][5]+' via '+data.resultset[i][6]:\"\")+'</small></p>' +\n            '</div>');\n            $(\"#\"+this.htmlObject+\" ul.timeline .timeline-panel:first\").append('<div class=\"timeline-body\"><p>'+(data.resultset[i][3]||\"\")+'</p><p><small>'+(data.resultset[i][7]||\"\")+'</small></p></div>')\n        }\n        \n        $(\"#\"+this.htmlObject+\" ul.timeline\").append('<li><div class=\"timeline-badge\"><i class=\"fa fa-clock-o\"></i></div></li>');\n    }\n}",
+      "value": "function(data){\n    console.log(data);\n    if(data.resultset!=undefined&&data.resultset.length>0&&data.resultset[0].length>0&&data.resultset[0][0]!=\"Repository not found\"){\n        //$(\"#\"+this.htmlObject).append('<div class=\"page-header\"><h1 id=\"timeline\">Tags</h1></div>');\n        $(\"#\"+this.htmlObject).append('<ul class=\"timeline\" style=\"margin-bottom: 50px;\"></ul>');\n        for(i=0;i<data.resultset.length;i++){\n            var timelineInverted=\"\";if(i%2==0){timelineInverted=\"timeline-inverted\";}\n            var tagName = data.resultset[i][2].substring(data.resultset[i][2].lastIndexOf(\"/\")+1,data.resultset[i][2].length).trim();\n            $(\"#\"+this.htmlObject+\" ul.timeline\").prepend('<li class=\"'+timelineInverted+'\"><div class=\"timeline-badge success\"><i class=\"glyphicon glyphicon-check\"></i></div><div class=\"timeline-panel\" style=\"word-break: break-word;\"></div></li>');\n            $(\"#\"+this.htmlObject+\" ul.timeline .timeline-panel:first\").append('<div class=\"timeline-heading\"><a href=\"#\" onclick=\"cloneTagDialog(\\''+tagName+'\\');\"><h4 class=\"timeline-title\">'+tagName+' <small>('+(data.resultset[i][2]||\"\")+')</small></h4></a>' +\n              '<p><small class=\"text-muted\">'+(data.resultset[i][5]?'<i class=\"glyphicon glyphicon-time\"></i> '+data.resultset[i][5]+' via '+data.resultset[i][6]:\"\")+'</small></p>' +\n            '</div>');\n            $(\"#\"+this.htmlObject+\" ul.timeline .timeline-panel:first\").append('<div class=\"timeline-body\"><p>'+(data.resultset[i][3]||\"\")+'</p><p><small>'+(data.resultset[i][7]||\"\")+'</small></p></div>')\n        }\n        \n        $(\"#\"+this.htmlObject+\" ul.timeline\").append('<li><div class=\"timeline-badge\"><i class=\"fa fa-clock-o\"></i></div></li>');\n    }\n} ",
       "type": "JavaScript"
      },
      {
