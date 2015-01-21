@@ -1,6 +1,4 @@
-#IvyGS
-
-IvyGC - Ivy Git Sync
+#IvyGS - Ivy Git Sync
 
 __IvyGS - Ivy Git Sysnc__ is a Sparkl plugin for help sinchronizer your BI solution that is storage on a git repository with Pentaho BI Server.
 
