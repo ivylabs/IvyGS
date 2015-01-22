@@ -38,7 +38,7 @@ import com.sun.jersey.multipart.FormDataParam;
  * @author <a href="mailto:joel.latino@ivy-is.co.uk">Joel Latino</a>
  * @since 1.0.0
  */
-@Path("/{plugin}/api")
+@Path("/{pluginId}/api")
 public class PluginResource extends CpkApi {
 
   private static final Logger log = LoggerFactory

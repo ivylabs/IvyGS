@@ -10,6 +10,6 @@ import pt.webdetails.cpk.CpkContentGenerator;
 public class IvyGSContentGenerator extends CpkContentGenerator {
 
   public String getPluginName() {
-    return new PluginUtils().getPluginName();
+    return "IvyGS";
   }
 }
