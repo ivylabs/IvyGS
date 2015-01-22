@@ -88,6 +88,7 @@
         </parameter>
     </parameters>
     <slaveservers>
+         <slaveserver><name>localhost</name><hostname>localhost</hostname><port>8877</port><webAppName/><username>cluster</username><password>Encrypted 2be98afc86aa7f2e4cb1aa265cd86aac8</password><proxy_hostname/><proxy_port/><non_proxy_hosts/><master>Y</master></slaveserver>
     </slaveservers>
 <job-log-table><connection/>
 <schema/>
@@ -177,7 +178,7 @@
       <filename/>
       <fields>
         <field>
-          <name>&#x24;&#x7b;cpk.plugin.dir&#x7d;&#x2f;static&#x2f;kettlePlugins&#x2f;IvyGitSteps.zip</name>
+          <name>&#x24;&#x7b;cpk.solution.system.dir&#x7d;&#x2f;kettle&#x2f;plugins&#x2f;IvyGitSteps</name>
         </field>
       </fields>
       <parallel>N</parallel>
@@ -279,7 +280,7 @@
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
+      <evaluation>N</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
@@ -288,7 +289,7 @@
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
-      <evaluation>N</evaluation>
+      <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>

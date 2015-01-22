@@ -912,7 +912,7 @@
      },
      {
       "name": "colHeaders",
-      "value": "[]",
+      "value": "[\"ID\",\"Author Name\",\"Author Email\",\"Creation Date\"]",
       "type": "Array"
      },
      {
